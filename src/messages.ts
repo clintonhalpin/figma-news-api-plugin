@@ -1,0 +1,1 @@
+export const UPDATE_PLUGIN_DATA = "UPDATE_PLUGIN_DATA";

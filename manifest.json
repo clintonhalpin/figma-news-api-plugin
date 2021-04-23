@@ -1,0 +1,7 @@
+{
+  "api": "1.0.0",
+  "name": "Your First Figma Plugin",
+  "main": "plugin.js",
+  "ui": "ui.html",
+  "id": "945461539774727755"
+}
