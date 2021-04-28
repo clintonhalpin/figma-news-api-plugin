@@ -1,7 +1,13 @@
 import React from "react";
 
-type IAppProps = {};
+type IAppProps = {
+  pluginData?: {
+    local?: {
+      apiKey?: string;
+    };
+  };
+};
 
-export const App = (props: IAppProps) => {
+export const App = ({ pluginData }: IAppProps) => {
   return <div>Hello World</div>;
 };
