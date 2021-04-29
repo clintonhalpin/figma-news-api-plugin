@@ -1,4 +1,6 @@
 import React from "react";
+import { Auth } from "./Auth";
+import { Search } from "./Search";
 
 type IAppProps = {
   pluginData?: {
@@ -9,5 +11,12 @@ type IAppProps = {
 };
 
 export const App = ({ pluginData }: IAppProps) => {
-  return <div>Hello World</div>;
+  return (
+    <div>
+      <Auth />
+      {pluginData && pluginData.local && pluginData.local.apiKey && (
+        <Search apiKey={pluginData.local.apiKey} />
+      )}
+    </div>
+  );
 };
