@@ -28,6 +28,7 @@ export const Auth = () => {
           {
             name: "apiKey",
             placeholder: "API Key...",
+            type: 'text'
           },
         ]}
       />

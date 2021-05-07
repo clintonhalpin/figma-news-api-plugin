@@ -17,11 +17,12 @@ export const Form = ({ fields, errorMsg, loading, onSubmit }) => {
             {errorMsg}
           </div>
         )}
-        {fields.map(f => {
+        {fields.map((f,i) => {
           if (f.type === "text") {
             return (
               <input
                 {...f}
+                key={i}
                 className="input__field"
                 type="text"
                 onChange={e => {

@@ -28,6 +28,7 @@ export const Search = ({ apiKey }) => {
           {
             name: "q",
             placeholder: "Search NY Times...",
+            type: 'text'
           },
         ]}
       />
