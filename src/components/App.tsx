@@ -1,14 +1,14 @@
-import React from "react";
-import { Auth } from "./Auth";
-import { Search } from "./Search";
+import React from "react"
+import { Auth } from './../components/Auth'
+import { Search } from "./../components/Search"
 
 type IAppProps = {
   pluginData?: {
     local?: {
-      apiKey?: string;
-    };
-  };
-};
+      apiKey?: string,
+    },
+  },
+}
 
 export const App = ({ pluginData }: IAppProps) => {
   return (
@@ -18,5 +18,5 @@ export const App = ({ pluginData }: IAppProps) => {
         <Search apiKey={pluginData.local.apiKey} />
       )}
     </div>
-  );
-};
+  )
+}
