@@ -1,23 +1,26 @@
-import React, { useState } from "react"
-import { fetchNyTimesSearch } from "./../utils/"
-import { Form } from "./Form"
+import React, { useState } from "react";
+import { fetchNyTimesSearch } from "./../utils/";
+import { Form } from "./Form";
+import { SAVE_AUTH } from "./../messages";
+import { sendJsonMessage } from "../utils/index";
 
 export const Auth = () => {
-  const [loading, setLoading] = useState(false)
-  const [errorMsg, setErrorMsg] = useState(null)
+  const [loading, setLoading] = useState(false);
+  const [errorMsg, setErrorMsg] = useState(null);
   const handleSubmit = async formFields => {
-    setLoading(true)
+    setLoading(true);
     try {
       let response = await fetchNyTimesSearch({
         q: "Test Query",
-        ...formFields,
-      })
-      console.log(response)
+        ...formFields
+      });
+      sendJsonMessage(SAVE_AUTH, formFields);
+      console.log(response);
     } catch (e) {
-      setErrorMsg("Unable to Authorize!")
+      setErrorMsg("Unable to Authorize!");
     }
-    setLoading(false)
-  }
+    setLoading(false);
+  };
   return (
     <div>
       <Form
@@ -28,10 +31,10 @@ export const Auth = () => {
           {
             name: "apiKey",
             placeholder: "API Key...",
-            type: 'text'
-          },
+            type: "text"
+          }
         ]}
       />
     </div>
-  )
-}
+  );
+};
