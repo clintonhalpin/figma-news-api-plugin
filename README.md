@@ -1,3 +1,3 @@
 # Figma News API Plugin
 
-Step 1 of the project
+Blog post here: https://clintonhalpin.com/blog/how-to-build-a-figma-plugin/
